@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const codes = document.querySelectorAll('.code');
 
 codes.forEach((code, idx) => {
