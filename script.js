@@ -26,6 +26,8 @@ for (let i = 1; i <= container_count; i++) {
 	input.min = "0";
 	input.maxLength = "1";
 	input.addEventListener("input",onInput);
+	input.addEventListener("keyup",backSpace);
+	input.addEventListener("keyup",enter);
     div.appendChild(input);
 }
 
@@ -40,13 +42,14 @@ function onInput(event){
 	curr_element.nextElementSibling && curr_element.nextElementSibling.focus();
 	lastEnteredElement = curr_element;
 }
-document.addEventListener("keyup",backSpace);
 function backSpace(event){
 	if(event.key === "Backspace"  && event.target.previousElementSibling){
-		if(event.target.value){
-			event.target.value = "";
-			event.target.focus();
-		}
-		else event.target.previousElementSibling && event.target.previousElementSibling.focus();
+		event.target.value = "";
+		event.target.previousElementSibling && event.target.previousElementSibling.focus();
+	}
+}
+function enter(e){
+	if(e.key === "Enter" && e.target.value){
+		e.target.nextElementSibling && e.target.nextElementSibling.focus();
 	}
 }
