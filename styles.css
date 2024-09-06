@@ -1,47 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/*  your css code here. If applicable */
+* {
     margin: 0;
-    background-color: #f4f4f4;
-}
-
-.otp-container {
-    text-align: center;
-    background-color: white;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#verification_heading {
-    margin-bottom: 0.5em;
-}
-
-#verification_subtext {
-    margin-bottom: 1em;
-    color: #555;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .code-container {
+    margin: auto;
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+	justify-content:space-around;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px; /* Add gap between input fields */
 }
 
 .code {
-    width: 3em;
-    height: 3em;
-    font-size: 2em;
+    width: 60px;
+    height: 60px;
     text-align: center;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    outline: none;
-    transition: border-color 0.3s;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+	box-shadow:2px 2px 2px ;
+	box-sizing:border-box;
+	font-size:20px;
 }
-
-.code:focus {
-    border-color: #007BFF;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+body{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+#para{
+	width:400px;
+	height:40px;
+	border:1px solid #e7e7e7;
+	border-radius:5px;
+	background-color:#eaeaea;
+	font-size:12px;
+}
+#par1{
+	font-size:12px;
+}
+.code:focus{
+	outline:1px solid blue;
 }
