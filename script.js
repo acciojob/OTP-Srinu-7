@@ -21,6 +21,7 @@ for (let i = 1; i <= container_count; i++) {
     let input = document.createElement("input");
     input.className = "code"; // Add the code class for styling
 	input.type = "number";
+	input.id = `code-${i}`;
     input.max = "9"; // Restrict input to 1 character
 	input.min = "0";
 	input.maxLength = "1";
