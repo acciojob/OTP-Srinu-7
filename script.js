@@ -42,8 +42,10 @@ function onInput(event){
 }
 document.addEventListener("keyup",(event) =>{
 	if(event.key === "Backspace" && lastEnteredElement){
-		lastEnteredElement.value = "";
-		lastEnteredElement.focus();
-		lastEnteredElement = (lastEnteredElement.previousElementSibling)?lastEnteredElement.previousElementSibling:null;
+		if(event.target.value){
+			event.target.value = "";
+			return;
+		}
+		event.target.previousElementSibling && event.target.previousElementSibling.focus();
 	}
 });
