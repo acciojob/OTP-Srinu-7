@@ -40,12 +40,13 @@ function onInput(event){
 	curr_element.nextElementSibling && curr_element.nextElementSibling.focus();
 	lastEnteredElement = curr_element;
 }
-document.addEventListener("keyup",(event) =>{
-	if(event.key === "Backspace" && lastEnteredElement){
+document.addEventListener("keyup",backSpace);
+function backSpace(event){
+	if(event.key === "Backspace"  && event.target.previousElementSibling){
 		if(event.target.value){
 			event.target.value = "";
-			return;
+			event.target.focus();
 		}
-		event.target.previousElementSibling && event.target.previousElementSibling.focus();
+		else event.target.previousElementSibling && event.target.previousElementSibling.focus();
 	}
-});
+}
